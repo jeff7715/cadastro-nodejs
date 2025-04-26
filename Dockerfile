@@ -9,6 +9,7 @@ COPY package*.json ./
 
 # Instala as dependências
 RUN npm install
+RUN npm install express bcrypt
 
 # Copia o restante dos arquivos para dentro do container
 COPY . .
