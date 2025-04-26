@@ -11,6 +11,10 @@ app.use(express.json());
 // Array em memória para armazenar usuários cadastrados
 const usuarios = [];
 
+app.get('/', async (req, res) => {
+  res.json(usuarios)
+})
+
 // Rota POST para cadastro de novos usuários
 app.post('/register', async (req, res) => {
   try {
